@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>LAYER - Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="player.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="player-page">
+    <header class="player-header">
+        <a href="my_sounds.html" class="back-btn"><i class="fas fa-chevron-left"></i></a>
+        <div class="header-center">
+            <span class="caption-2" style="color: var(--text-dim);">재생 중</span>
+            <span class="body-4">My Sound 01</span>
+        </div>
+        <div class="header-icons">
+            <i class="far fa-bell"></i>
+            <i class="far fa-user-circle"></i>
+        </div>
+    </header>
+
+    <main class="player-main">
+        <div class="album-art-container">
+            <div class="album-art-glow"></div>
+            <div class="album-art-main" id="albumArtMain" style="background-image: url('images/image1.png');"></div>
+        </div>
+
+        <div class="track-info-container">
+            <div class="track-text">
+                <h1 class="body-1">My Sound 01</h1>
+                <p class="body-5" style="color: var(--text-dim);">#비오는날 #로파이 #차분한</p>
+            </div>
+            <button class="like-btn" id="likeBtn">
+                <i class="far fa-heart"></i>
+            </button>
+        </div>
+
+        <div class="progress-section">
+            <div class="progress-bar-container">
+                <input type="range" class="progress-slider" id="progressSlider" min="0" max="160" value="120">
+                <div class="progress-fill" id="progressFill" style="width: 75%;"></div>
+            </div>
+            <div class="time-labels">
+                <span class="caption-1" id="currentTime">2:00</span>
+                <span class="caption-1" id="totalTime">2:40</span>
+            </div>
+        </div>
+
+        <div class="main-controls">
+            <button class="control-btn"><i class="fas fa-step-backward"></i></button>
+            <button class="play-pause-btn" id="playPauseBtn">
+                <i class="fas fa-play"></i>
+            </button>
+            <button class="control-btn"><i class="fas fa-step-forward"></i></button>
+        </div>
+
+        <div class="aux-controls">
+            <button class="aux-btn"><i class="fas fa-random"></i></button>
+            <button class="aux-btn"><i class="fas fa-redo"></i></button>
+            <button class="btn-edit player-edit-btn" onclick="location.href='editor.html'">편집</button>
+            <button class="aux-btn"><i class="fas fa-share-alt"></i></button>
+        </div>
+    </main>
+
+    <nav class="bottom-nav">
+        <div class="nav-item" data-tab="home" onclick="location.href='index.html'">
+            <i class="fas fa-home"></i>
+            <span class="caption-3">홈</span>
+        </div>
+        <div class="nav-item active" data-tab="files" onclick="location.href='my_sounds.html'">
+            <i class="fas fa-folder-open"></i>
+            <span class="caption-3">내 음악</span>
+        </div>
+        <div class="nav-item" data-tab="community">
+            <i class="fas fa-users"></i>
+            <span class="caption-3">커뮤니티</span>
+        </div>
+        <div class="nav-item" data-tab="my">
+            <i class="fas fa-user"></i>
+            <span class="caption-3">MY</span>
+        </div>
+    </nav>
+
+    <script src="player.js"></script>
+</body>
+</html>

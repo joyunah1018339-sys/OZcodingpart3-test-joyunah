@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>LAYER - AI Music Editing</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/로고_투명2.png" alt="LAYER">
+        </div>
+        <div class="header-icons">
+            <i class="far fa-bell"></i>
+            <i class="far fa-user-circle"></i>
+        </div>
+    </header>
+
+    <main>
+        <!-- AI Generation Tool Box -->
+        <section class="ai-tool-box-container">
+            <div class="ai-tool-box">
+                <div class="tool-box-header">
+                    <i class="fas fa-sparkles"></i>
+                    <span class="caption-1">AI 프롬프트 생성</span>
+                </div>
+                <div class="tool-box-body">
+                    <div class="input-area">
+                        <input type="text" placeholder="어떤 음악을 만들어 드릴까요?" class="body-2">
+                    </div>
+                    <button class="send-btn">
+                        <i class="fas fa-arrow-up"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Keywords -->
+        <div class="keyword-scroll">
+            <span class="chip active">#비오는날</span>
+            <span class="chip">#우울한날</span>
+            <span class="chip">#기분전환</span>
+            <span class="chip">#기분좋은날</span>
+            <span class="chip">#해가쨍쨍한날</span>
+            <span class="chip">#바람이선선한날</span>
+            <span class="chip">#별이반짝이는날</span>
+        </div>
+
+        <!-- Section 1: Recommended Mix -->
+        <section>
+            <div class="container">
+                <div class="section-header">
+                    <h2>#윤아님만을 위한 추천 믹스</h2>
+                </div>
+            </div>
+            <div class="carousel-container">
+               <article class="album-card">
+                <div class="album-art-placeholder" style="background-image: url('images/image1.png'); background-size: cover; background-position: center;"></div>
+              <span class="body-1 album-title">Midnight Groove</span>
+                <span class="body-5 album-author">LAYER AI</span>
+                </article>
+
+                <article class="album-card">
+                    <div class="album-art-placeholder" style="background-image: url('images/image2.png'); background-size: cover; background-position: center;"></div>
+                    <span class="body-1 album-title">Neon Pulse</span>
+                    <span class="body-5 album-author">CyberMix</span>
+                </article>
+                <article class="album-card">
+                    <div class="album-art-placeholder" style="background-image: url('images/image3.png'); background-size: cover; background-position: center;"></div>
+                    <span class="body-1 album-title">Ethereal Soft</span>
+                    <span class="body-5 album-author">Soul Layer</span>
+                </article>
+                <article class="album-card">
+                    <div class="album-art-placeholder" style="background-image: url('images/image4.png'); background-size: cover; background-position: center;"></div>
+                    <span class="body-1 album-title">Urban Flow</span>
+                    <span class="body-5 album-author">Vibe AI</span>
+                </article>
+            </div>
+        </section>
+
+        <!-- Section 2: Mood Recommendations -->
+        <section style="margin-top: 32px; margin-bottom: 20px;">
+            <div class="container">
+                <div class="section-header">
+                    <h2>#분위기별 추천</h2>
+                </div>
+            </div>
+            <div class="mood-grid">
+                <div class="mood-card" style="background-image:url('images/image5.png')">
+                    <span class="body-3 mood-name">새벽 감성</span>
+                </div>
+                <div class="mood-card" style="background-image:url('images/image6.png')">
+                    <span class="body-3 mood-name">에너제틱</span>
+                </div>
+                <div class="mood-card" style="background-image:url('images/image7.png')">
+                    <span class="body-3 mood-name">릴렉스</span>
+                </div>
+                <div class="mood-card" style="background-image:url('images/image8.png')">
+                    <span class="body-3 mood-name">집중할 때</span>
+                </div>
+                <div class="mood-card" style="background-image:url('images/image9.png')">
+                     <span class="body-3 mood-name">드라이브</span>
+                </div>
+                <div class="mood-card" style="background-image:url('images/image10.png')">
+                    <span class="body-3 mood-name">기분 전환</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <nav class="bottom-nav">
+        <div class="nav-item active" data-tab="home">
+            <i class="fas fa-home"></i>
+            <span class="caption-3">홈</span>
+        </div>
+        <div class="nav-item" data-tab="files" onclick="location.href='my_sounds.html'">
+            <i class="fas fa-folder-open"></i>
+            <span class="caption-3">내 음악</span>
+        </div>
+        <div class="nav-item" data-tab="community">
+            <i class="fas fa-users"></i>
+            <span class="caption-3">커뮤니티</span>
+        </div>
+        <div class="nav-item" data-tab="my">
+            <i class="fas fa-user"></i>
+            <span class="caption-3">MY</span>
+        </div>
+    </nav>
+
+    <style>
+        /* Specific overrides for placeholders since image gen failed */
+        .album-art-placeholder {
+            width: 160px;
+            height: 160px;
+            border-radius: var(--radius-lg);
+            margin-bottom: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        }
+    </style>
+
+    <script src="main.js"></script>
+</body>
+</html>

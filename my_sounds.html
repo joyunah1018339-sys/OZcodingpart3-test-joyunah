@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>LAYER - My Sounds</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="images/로고_투명2.png" alt="LAYER"></a>
+        </div>
+        <div class="header-icons">
+            <i class="far fa-bell"></i>
+            <i class="far fa-user-circle"></i>
+        </div>
+    </header>
+
+    <main>
+        <div class="screen-header">
+            <h1># 내 사운드</h1>
+            <p class="body-5 sub-text">프롬프트로 생성된 나만의 AI 사운드</p>
+        </div>
+
+        <!-- Prompt Box -->
+        <div class="prompt-box">
+            <div class="tool-box-header">
+                <i class="fas fa-sparkles"></i>
+                <span class="caption-1">AI 프롬프트 생성</span>
+            </div>
+            <p class="body-3" style="color: var(--primary-purple); margin-top: 8px;">"비 오는 창가에서 우울하지만 차분해지는 로파이 힙합 비트와 은은한 빗소리 레이어"</p>
+        </div>
+
+        <!-- Sound List -->
+        <div class="sound-list">
+            <article class="sound-card">
+                <div class="sound-art" style="background-image: url('images/image1.png'); background-size: cover; background-position: center;"></div>
+                <div class="sound-info">
+                    <span class="body-1">My Sound 01</span>
+                    <span class="label-1" style="color: var(--text-dim);">레이어 12개 사용</span>
+                </div>
+                <div class="sound-actions">
+                    <button class="btn-play" onclick="location.href='player.html?img=' + encodeURIComponent('images/image1.png')">재생</button>
+                    <button class="btn-edit" onclick="location.href='editor.html?img=' + encodeURIComponent('images/image1.png')">편집</button>
+                </div>
+            </article>
+
+            <article class="sound-card">
+                <div class="sound-art" style="background-image: url('images/image2.png'); background-size: cover; background-position: center;"></div>
+                <div class="sound-info">
+                    <span class="body-1">Night City Layer</span>
+                    <span class="label-1" style="color: var(--text-dim);">레이어 8개 사용</span>
+                </div>
+                <div class="sound-actions">
+                    <button class="btn-play" onclick="location.href='player.html?img=' + encodeURIComponent('images/image2.png')">재생</button>
+                    <button class="btn-edit" onclick="location.href='editor.html?img=' + encodeURIComponent('images/image2.png')">편집</button>
+                </div>
+            </article>
+
+            <article class="sound-card">
+                <div class="sound-art" style="background-image: url('images/image3.png'); background-size: cover; background-position: center;"></div>
+                <div class="sound-info">
+                    <span class="body-1">Forest Whisper</span>
+                    <span class="label-1" style="color: var(--text-dim);">레이어 5개 사용</span>
+                </div>
+                <div class="sound-actions">
+                    <button class="btn-play" onclick="location.href='player.html?img=' + encodeURIComponent('images/image3.png')">재생</button>
+                    <button class="btn-edit" onclick="location.href='editor.html?img=' + encodeURIComponent('images/image3.png')">편집</button>
+                </div>
+            </article>
+
+            <article class="sound-card">
+                <div class="sound-art" style="background-image: url('images/image4.png'); background-size: cover; background-position: center;"></div>
+                <div class="sound-info">
+                    <span class="body-1">Morning Coffee</span>
+                    <span class="label-1" style="color: var(--text-dim);">레이어 15개 사용</span>
+                </div>
+                <div class="sound-actions">
+                    <button class="btn-play" onclick="location.href='player.html?img=' + encodeURIComponent('images/image4.png')">재생</button>
+                    <button class="btn-edit" onclick="location.href='editor.html?img=' + encodeURIComponent('images/image4.png')">편집</button>
+                </div>
+            </article>
+        </div>
+
+        <!-- FAB -->
+        <div class="fab" onclick="location.href='create.html'">
+            <i class="fas fa-plus fab-icon"></i>
+            <span class="caption-1">새 사운드 생성</span>
+        </div>
+    </main>
+
+    <nav class="bottom-nav">
+        <div class="nav-item" data-tab="home" onclick="location.href='index.html'">
+            <i class="fas fa-home"></i>
+            <span class="caption-3">홈</span>
+        </div>
+        <div class="nav-item active" data-tab="files">
+            <i class="fas fa-folder-open"></i>
+            <span class="caption-3">내 음악</span>
+        </div>
+        <div class="nav-item" data-tab="community">
+            <i class="fas fa-users"></i>
+            <span class="caption-3">커뮤니티</span>
+        </div>
+        <div class="nav-item" data-tab="my">
+            <i class="fas fa-user"></i>
+            <span class="caption-3">MY</span>
+        </div>
+    </nav>
+
+    <script src="main.js"></script>
+</body>
+</html>

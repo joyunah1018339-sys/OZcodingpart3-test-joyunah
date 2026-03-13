@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>LAYER - Music Editor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="editor-header">
+        <a href="my_sounds.html" class="back-btn"><i class="fas fa-chevron-left"></i></a>
+        <h2>First step on Silence</h2>
+        <div class="header-icons">
+            <i class="far fa-save" style="margin-right: 16px;"></i>
+            <i class="fas fa-share-alt"></i>
+        </div>
+    </header>
+
+    <main style="padding-bottom: 100px;">
+        <!-- Visualizer Section -->
+        <section class="visualizer-section">
+            <div class="album-art-circle" id="editorAlbumArt" style="background-image: url('images/image1.png'); background-size: cover; background-position: center;"></div>
+            
+            <div class="waveform-container">
+                <!-- Simple Waveform representation -->
+                <div class="wave-bar active" style="height: 30%;"></div>
+                <div class="wave-bar active" style="height: 50%;"></div>
+                <div class="wave-bar active" style="height: 80%;"></div>
+                <div class="wave-bar active" style="height: 60%;"></div>
+                <div class="wave-bar active" style="height: 40%;"></div>
+                <div class="wave-bar active" style="height: 70%;"></div>
+                <div class="wave-bar active" style="height: 90%;"></div>
+                <div class="wave-bar active" style="height: 50%;"></div>
+                <div class="wave-bar" style="height: 40%;"></div>
+                <div class="wave-bar" style="height: 60%;"></div>
+                <div class="wave-bar" style="height: 80%;"></div>
+                <div class="wave-bar" style="height: 50%;"></div>
+                <div class="wave-bar" style="height: 30%;"></div>
+                <div class="wave-bar" style="height: 60%;"></div>
+                <div class="wave-bar" style="height: 40%;"></div>
+                <div class="wave-bar" style="height: 70%;"></div>
+                <div class="wave-bar" style="height: 50%;"></div>
+                <div class="wave-bar" style="height: 30%;"></div>
+            </div>
+            
+            <p class="body-5">00:15 / 03:45</p>
+        </section>
+
+        <!-- Tab Navigation -->
+        <nav class="editor-tabs">
+            <div class="tab-item">편집</div>
+            <div class="tab-item">스타일</div>
+            <div class="tab-item active">레이어</div>
+        </nav>
+
+        <!-- Mixer List -->
+        <section class="mixer-list">
+            <div class="mixer-item">
+                <i class="fas fa-check-circle layer-checkbox"></i>
+                <span class="body-2 layer-name">통기타</span>
+                <div class="volume-slider-container">
+                    <input type="range" class="volume-slider" min="0" max="100" value="80">
+                </div>
+            </div>
+            
+            <div class="mixer-item">
+                <i class="fas fa-check-circle layer-checkbox"></i>
+                <span class="body-2 layer-name">일렉 기타</span>
+                <div class="volume-slider-container">
+                    <input type="range" class="volume-slider" min="0" max="100" value="60">
+                </div>
+            </div>
+            
+            <div class="mixer-item">
+                <i class="fas fa-check-circle layer-checkbox"></i>
+                <span class="body-2 layer-name">피아노</span>
+                <div class="volume-slider-container">
+                    <input type="range" class="volume-slider" min="0" max="100" value="90">
+                </div>
+            </div>
+            
+            <div class="mixer-item">
+                <i class="fas fa-check-circle layer-checkbox"></i>
+                <span class="body-2 layer-name">드럼</span>
+                <div class="volume-slider-container">
+                    <input type="range" class="volume-slider" min="0" max="100" value="70">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bottom Action Bar -->
+    <div class="bottom-action-bar">
+        <button class="btn-complete" onclick="location.href='my_sounds.html'">편집 완료</button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

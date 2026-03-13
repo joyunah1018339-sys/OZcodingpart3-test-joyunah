@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>LAYER - Create Sound</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="create.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="create-page">
+    <header class="gen-hd">
+        <a href="my_sounds.html" class="gen-back"><i class="fas fa-chevron-left"></i></a>
+        <div class="gen-title">새 사운드 만들기</div>
+        <div style="width: 36px;"></div> <!-- Spacer to keep title centered if needed, or just leave empty -->
+    </header>
+
+    <main class="gen-scroll">
+        <!-- ① 프롬프트 입력창 -->
+        <section class="prompt-wrap">
+            <div class="sec-label">✦ &nbsp;어떤 음악을 만들까요?</div>
+            <div class="prompt-box">
+                <div class="pb-top">
+                    <span class="pb-spark"><i class="fas fa-sparkles"></i></span>
+                    <span class="pb-label">AI 프롬프트</span>
+                </div>
+                <div class="pb-body">
+                    <div class="pb-input">
+                        <span class="typed">비 오는 창가에서 듣기 좋은 로파이</span><span class="cursor"></span>
+                    </div>
+                    <div class="pb-send"><i class="fas fa-arrow-up"></i></div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- ② 허밍/멜로디 녹음 -->
+        <section class="rec-wrap">
+            <div class="sec-label">🎤 &nbsp;내 멜로디 녹음하기</div>
+            <div class="rec-box">
+                <div class="rec-btn"><i class="fas fa-microphone"></i></div>
+                <div class="rec-right">
+                    <div class="rec-waveform" id="waveform"></div>
+                    <div class="rec-meta">
+                        <span class="rec-status">● REC &nbsp;00:08</span>
+                        <span class="rec-hint">탭해서 녹음 시작</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- ③ 가사 입력 -->
+        <section class="lyric-wrap">
+            <div class="sec-label">✍️ &nbsp;가사 입력하기</div>
+            <div class="lyric-box">
+                <div class="lyric-text">
+                    <span class="typed">비가 내리는 창가에서<br>너를 생각해 오늘도</span><br>
+                    <span style="color:#444;">가사를 입력해주세요<span class="cursor"></span></span>
+                </div>
+                <div class="lyric-count">38 / 500</div>
+            </div>
+            <div class="lyric-tools">
+                <div class="ltool ai"><i class="fas fa-sparkles"></i>AI 가사 제안</div>
+                <div class="ltool"><i class="fas fa-list"></i>구조 설정</div>
+                <div class="ltool"><i class="fas fa-language"></i>번역</div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- ④ 스타일 태그 -->
+        <section class="style-wrap">
+            <div class="sec-label" style="margin-bottom:12px;">🏷 &nbsp;스타일 선택</div>
+
+            <div class="tag-group">
+                <div class="tag-group-label">장르</div>
+                <div class="tags">
+                    <div class="tag on">로파이</div>
+                    <div class="tag">재즈</div>
+                    <div class="tag on">힙합</div>
+                    <div class="tag">EDM</div>
+                    <div class="tag">팝</div>
+                    <div class="tag">어쿠스틱</div>
+                </div>
+            </div>
+
+            <div class="tag-group">
+                <div class="tag-group-label">분위기</div>
+                <div class="tags">
+                    <div class="tag mint on">차분한</div>
+                    <div class="tag mint on">우울한</div>
+                    <div class="tag mint">신나는</div>
+                    <div class="tag mint">몽환적인</div>
+                    <div class="tag mint">따뜻한</div>
+                </div>
+            </div>
+
+            <div class="tag-group">
+                <div class="tag-group-label">악기</div>
+                <div class="tags">
+                    <div class="tag on">피아노</div>
+                    <div class="tag on">기타</div>
+                    <div class="tag">드럼</div>
+                    <div class="tag mint on">빗소리</div>
+                    <div class="tag">바이올린</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="create-wrap">
+        <button class="create-btn" onclick="location.href='my_sounds.html'">
+            <i class="fas fa-magic"></i> AI로 생성하기
+        </button>
+    </div>
+
+    <script src="create.js"></script>
+</body>
+</html>
